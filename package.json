@@ -1,16 +1,16 @@
 {
-  "name": "@nju33/json-schema",
-  "version": "0.0.2",
-  "main": "index.js",
-  "files": [],
-  "repository": "nju33/json-schema.git",
-  "author": "nju33 <nju33.ki@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@nju33/prettier": "^0.0.7",
-    "prettier": "^1.17.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+ "name": "@nju33/json-schema",
+ "version": "0.0.4",
+ "main": "index.js",
+ "files": [],
+ "repository": "nju33/json-schema.git",
+ "author": "nju33 <nju33.ki@gmail.com>",
+ "license": "MIT",
+ "devDependencies": {
+  "@nju33/prettier": "^0.0.7",
+  "prettier": "^1.17.0"
+ },
+ "publishConfig": {
+  "access": "public"
+ }
 }
