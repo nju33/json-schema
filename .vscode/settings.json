@@ -4,6 +4,10 @@
 			"fileMatch": ["/schemas/slack/post-message.test.json"],
 			"url": "./schemas/slack/post-message.json"
 		},
+		{
+			"fileMatch": ["/schemas/slack/post-message.remote.test.json"],
+			"url": "https://unpkg.com/@nju33/json-schema@0.0.5/schemas/slack/post-message.json"
+		},
     {
       "fileMatch": ["/schemas/**/*!(.test).json"],
       "schema": {
