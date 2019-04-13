@@ -1,11 +1,11 @@
 {
   "name": "@nju33/json-schema",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "index.js",
   "files": [
-		"index.js",
-		"schemas"
-	],
+    "index.js",
+    "schemas"
+  ],
   "repository": "nju33/json-schema.git",
   "author": "nju33 <nju33.ki@gmail.com>",
   "license": "MIT",
