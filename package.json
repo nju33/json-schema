@@ -9,5 +9,8 @@
   "devDependencies": {
     "@nju33/prettier": "^0.0.7",
     "prettier": "^1.17.0"
-  }
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
