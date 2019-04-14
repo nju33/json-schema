@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "JSON schema for sandbox.config.json",
+  "type": "object",
+  "properties": {
+    "parser": {
+      "description": "a special syntax parser",
+      "oneOf": [
+        {"type": "string", "enum": ["supercss"]},
+        {"type": "boolean", "enum": [false]}
+      ]
+    },
+    "syntax": {
+      "description": "an object providing a syntax parser and a stringifier",
+      "type": "string",
+      "enum": [
+        "sugarss",
+        "postcss-syntax",
+        "postcss-html",
+        "postcss-markdown",
+        "postcss-jsx",
+        "postcss-styled",
+        "postcss-scss",
+        "postcss-sass",
+        "postcss-less",
+        "postcss-less-engine",
+        "postcss-js",
+        "postcss-safe-parser",
+        "midas"
+      ]
+    },
+    "stringifier": {
+      "description": "a special syntax output generator",
+      "type": "string"
+    },
+    "map": {
+      "description": "source map options",
+      "type": "string",
+      "enum": ["inline", "prev", "sourcesContent", "annotation", "from"]
+    },
+    "from": {
+      "description": "the input file name (most runners set it automatically)",
+      "type": "string"
+    },
+    "to": {
+      "description": "the input file name (most runners set it automatically)",
+      "type": "string",
+      "pattern": "^(.+)/([^/]+)$"
+    },
+    "plugins": {
+      "description": "the plugin will be loaded with defaults",
+      "type": "object",
+      "additionalProperties": {
+        "oneOf": [
+          {"type": "null"},
+          {"type": "boolean", "enum": [false]},
+          {
+            "type": "object",
+            "properties": {
+              "options": {
+                "type": "object"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

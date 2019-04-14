@@ -5,6 +5,10 @@
 			"url": "/schemas/codesandbox/sandbox.config.json"
 		},
 		{
+			"fileMatch": ["/tests/postcss-load-config/.postcssrc.json"],
+			"url": "/schemas/postcss-load-config/.postcssrc.json"
+		},
+		{
 			"fileMatch": ["/schemas/slack/post-message.test.json"],
 			"url": "./schemas/slack/post-message.json"
 		},
