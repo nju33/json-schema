@@ -24,6 +24,15 @@
     },
 
     {
+      "fileMatch": ["/tests/renovate/renovate.json"],
+      "url": "/schemas/renovate/renovate.json"
+    },
+    {
+      "fileMatch": ["/tests/renovate/renovate.remote.json"],
+      "url": "https://unpkg.com/@nju33/json-schema@0.0.12/schemas/renovate/renovate.json"
+    },
+
+    {
       "fileMatch": ["/tests/slack/api/chat/post-message.json"],
       "url": "/schemas/slack/api/chat/index.json"
     },

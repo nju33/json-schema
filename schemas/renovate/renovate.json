@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "JSON schema for Renovate",
+  "type": "object",
+  "properties": {
+    "extends": {
+      "type": "string",
+      "default": "nju33"
+    }
+	},
+	"required": ["extends"]
+}
