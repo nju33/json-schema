@@ -6,7 +6,7 @@
     },
     "color": {
       "description": "アタッチメントの左に付くボーダーカラー",
-      "$ref": "../../../pattern.json#/definitions/string/color"
+      "$ref": "../../pattern.json#/definitions/string/color"
     },
     "text": {
       "description": "アタッチメントのテキスト",
@@ -22,11 +22,11 @@
     },
     "author_link": {
       "description": "`author_name`テキストのリンク",
-      "$ref": "../../../pattern.json#/definitions/string/url"
+      "$ref": "../../pattern.json#/definitions/string/url"
     },
     "author_icon": {
       "description": "`author_name`テキストの前に付くアイコン画像のリンク",
-      "$ref": "../../../pattern.json#/definitions/string/url"
+      "$ref": "../../pattern.json#/definitions/string/url"
     },
     "title": {
       "description": "タイトル",
@@ -34,7 +34,7 @@
     },
     "title_link": {
       "description": "タイトルのリンク",
-      "$ref": "../../../pattern.json#/definitions/string/url"
+      "$ref": "../../pattern.json#/definitions/string/url"
     },
     "fields": {
       "type": "array",
@@ -43,16 +43,16 @@
       }
     },
     "image_url": {
-      "$ref": "../../../pattern.json#/definitions/string/url"
+      "$ref": "../../pattern.json#/definitions/string/url"
     },
     "thumb_url": {
-      "$ref": "../../../pattern.json#/definitions/string/url"
+      "$ref": "../../pattern.json#/definitions/string/url"
     },
     "footer": {
       "type": "string"
     },
     "footer_icon": {
-      "$ref": "../../../pattern.json#/definitions/string/url"
+      "$ref": "../../pattern.json#/definitions/string/url"
     },
     "ts": {
       "type": "number"
