@@ -4,7 +4,7 @@
   "title": "JSON schema for Slack chat.*",
   "oneOf": [
     {
-      "$ref": "./chat/post-message.json#/definitions/postMessage"
+      "$ref": "./post-message.json#/definitions/postMessage"
     }
   ]
 }

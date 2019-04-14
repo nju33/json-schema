@@ -29,7 +29,7 @@
       "examples": [":+1:", ":smile:", ":tada:"]
     },
     "icon_url": {
-      "$ref": "../../pattern.json#/definitions/string/url"
+      "$ref": "../../../pattern.json#/definitions/string/url"
     },
     "link_names": {
       "type": "boolean"
