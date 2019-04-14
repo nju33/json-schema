@@ -1,23 +1,23 @@
 {
   "json.schemas": [
-		{
-			"fileMatch": ["/tests/codesandbox/sandbox.config.json"],
-			"url": "/schemas/codesandbox/sandbox.config.json"
-		},
-		{
-			"fileMatch": ["/tests/postcss-load-config/.postcssrc.json"],
-			"url": "/schemas/postcss-load-config/.postcssrc.json"
-		},
-		{
-			"fileMatch": ["/schemas/slack/post-message.test.json"],
-			"url": "./schemas/slack/post-message.json"
-		},
-		{
-			"fileMatch": ["/schemas/slack/post-message.remote.test.json"],
-			"url": "https://unpkg.com/@nju33/json-schema@0.0.5/schemas/slack/post-message.json"
-		},
     {
-      "fileMatch": ["/schemas/**/*!(.test).json"],
+      "fileMatch": ["/tests/codesandbox/sandbox.config.json"],
+      "url": "/schemas/codesandbox/sandbox.config.json"
+    },
+    {
+      "fileMatch": ["/tests/postcss-load-config/.postcssrc.json"],
+      "url": "/schemas/postcss-load-config/.postcssrc.json"
+    },
+    {
+      "fileMatch": ["/tests/slack/post-message.json"],
+      "url": "/schemas/slack/chat.json"
+    },
+    {
+      "fileMatch": ["/tests/slack/post-message.remote.json"],
+      "url": "https://unpkg.com/@nju33/json-schema/schemas/slack/chat.json"
+    },
+    {
+      "fileMatch": ["/schemas/**/*.json"],
       "schema": {
         "id": "http://json-schema.org/draft-04/schema#",
         "$schema": "http://json-schema.org/draft-04/schema#",

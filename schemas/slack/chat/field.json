@@ -1,0 +1,28 @@
+{
+  "definitions": {
+    "title": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "short": {
+      "type": "boolean"
+    },
+    "field": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "$ref": "#/definitions/title"
+        },
+        "value": {
+          "$ref": "#/definitions/value"
+        },
+        "short": {
+          "$ref": "#/definitions/short"
+        }
+      },
+      "required": ["title", "value"]
+    }
+  }
+}

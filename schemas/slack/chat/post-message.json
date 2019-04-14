@@ -1,0 +1,32 @@
+{
+  "definitions": {
+    "channel": {
+      "description": "投稿先となるチャンネルID",
+      "type": "string"
+    },
+    "text": {
+      "description": "投稿内容",
+      "type": "string"
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "$ref": "./attachment.json#/definitions/attachment"
+      }
+    },
+    "postMessage": {
+      "type": "object",
+      "properties": {
+        "channel": {
+          "$ref": "#/definitions/channel"
+        },
+        "text": {
+          "$ref": "#/definitions/text"
+        },
+        "attachments": {
+          "$ref": "#/definitions/attachments"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "definitions": {
+    "fallback": {
+      "description": "何らかの原因でボタンなどが表示できなかった場合の代わりのテキスト",
+      "type": "string"
+    },
+    "color": {
+      "description": "アタッチメントの左に付くボーダーカラー",
+      "$ref": "../../pattern.json#/definitions/string/color"
+    },
+    "text": {
+      "description": "アタッチメントのテキスト",
+      "type": "string"
+    },
+    "pretext": {
+      "description": "アッタチメントの上部のテキスト",
+      "type": "string"
+    },
+    "author_name": {
+      "description": "テキストの上部に小さいフォントサイズで標示されるテキスト",
+      "type": "string"
+    },
+    "author_link": {
+      "description": "`author_name`テキストのリンク",
+      "$ref": "../../pattern.json#/definitions/string/url"
+    },
+    "author_icon": {
+      "description": "`author_name`テキストの前に付くアイコン画像のリンク",
+      "$ref": "../../pattern.json#/definitions/string/url"
+    },
+    "title": {
+      "description": "タイトル",
+      "type": "string"
+    },
+    "title_link": {
+      "description": "タイトルのリンク",
+      "$ref": "../../pattern.json#/definitions/string/url"
+    },
+    "fields": {
+      "type": "array",
+      "items": {
+        "$ref": "./field.json#/definitions/field"
+      }
+    },
+    "image_url": {
+      "$ref": "../../pattern.json#/definitions/string/url"
+    },
+    "thumb_url": {
+      "$ref": "../../pattern.json#/definitions/string/url"
+    },
+    "footer": {
+      "type": "string"
+    },
+    "footer_icon": {
+      "$ref": "../../pattern.json#/definitions/string/url"
+    },
+    "ts": {
+      "type": "number"
+    },
+    "attachment": {
+      "type": "object",
+      "properties": {
+        "fallback": {
+          "$ref": "#/definitions/fallback"
+        },
+        "color": {
+          "$ref": "#/definitions/color"
+        },
+        "text": {
+          "$ref": "#/definitions/text"
+        },
+        "pretext": {
+          "$ref": "#/definitions/pretext"
+        },
+        "author_name": {
+          "$ref": "#/definitions/author_name"
+        },
+        "author_link": {
+          "$ref": "#/definitions/author_link"
+        },
+        "author_icon": {
+          "$ref": "#/definitions/author_icon"
+        },
+        "title": {
+          "$ref": "#/definitions/author_link"
+        },
+        "title_link": {
+          "$ref": "#/definitions/author_icon"
+        },
+        "fields": {
+          "$ref": "#/definitions/fields"
+        },
+        "image_url": {
+          "$ref": "#/definitions/image_url"
+        },
+        "thumb_url": {
+          "$ref": "#/definitions/thumb_url"
+        },
+        "footer": {
+          "$ref": "#/definitions/footer"
+        },
+        "footer_icon": {
+          "$ref": "#/definitions/footer_icon"
+        },
+        "ts": {
+          "$ref": "#/definitions/ts"
+        }
+      },
+      "dependencies": {
+        "author_link": ["author_name"],
+        "author_icon": ["author_name"],
+        "title_link": ["title"],
+        "footer_icon": ["footer"]
+      }
+    }
+  }
+}

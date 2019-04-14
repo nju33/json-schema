@@ -1,0 +1,11 @@
+{
+  "channel": 123,
+  "text": 123,
+  "attachments": [
+    {
+      "author_name": "hoge",
+      "author_icon": "https://sdf.com",
+      "footer": "a"
+    }
+  ]
+}
