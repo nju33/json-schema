@@ -1,6 +1,10 @@
 {
   "json.schemas": [
 		{
+			"fileMatch": ["/tests/codesandbox/sandbox.config.json"],
+			"url": "/schemas/codesandbox/sandbox.config.json"
+		},
+		{
 			"fileMatch": ["/schemas/slack/post-message.test.json"],
 			"url": "./schemas/slack/post-message.json"
 		},
