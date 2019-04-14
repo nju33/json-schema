@@ -1,4 +1,6 @@
 {
 	"command": "/test",
-	"text": "foo"
+	"text": "foo",
+	"user_id": "U2147483697",
+	"user_name": "nju33"
 }

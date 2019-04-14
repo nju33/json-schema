@@ -1,0 +1,13 @@
+{
+  "type": "interactive_message",
+  "actions": [
+    {
+      "name": "a",
+      "selected_options": [
+        {
+          "value": ""
+        }
+      ]
+    }
+  ]
+}

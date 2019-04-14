@@ -1,5 +1,5 @@
 {
-  "$id": "http://unpkg.com/@nju33/json-schema/schemas/slack/chat.json",
+  "$id": "http://unpkg.com/@nju33/json-schema/schemas/request/slash-command/index.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "JSON schema for Slack slash command request",
 
@@ -10,41 +10,33 @@
       "examples": ["gIkuvaNzQIHg97ATvDxqgjtO"]
     },
     "team_id": {
-      "type": "string",
-      "examples": ["T0001"]
+      "$ref": "../team.json#/definitions/id"
     },
     "team_domain": {
-      "type": "string",
-      "examples": ["example"]
+      "$ref": "../team.json#/definitions/domain"
     },
     "enterprise_id": {
-      "type": "string",
-      "examples": ["E0001"]
+      "$ref": "../enterprise.json#/definitions/id"
     },
     "enterprise_name": {
-      "type": "string",
-      "examples": ["Globular Construct Inc"]
+      "$ref": "../enterprise.json#/definitions/name"
     },
     "channel_id": {
-      "type": "string",
-      "examples": ["C2147483705"]
+      "$ref": "../channel.json#/definitions/id"
     },
     "channel_name": {
-      "type": "string",
-      "examples": ["test"]
+      "$ref": "../channel.json#/definitions/name"
     },
     "user_id": {
-      "type": "string",
-      "examples": ["U2147483697"]
+      "$ref": "../user.json#/definitions/id"
     },
     "user_name": {
-      "type": "string",
-      "examples": ["nju33"]
+      "$ref": "../user.json#/definitions/name"
     },
     "command": {
-			"type": "string",
-			"default": "/",
-			"pattern": "^/\\w+$"
+      "type": "string",
+      "default": "/",
+      "pattern": "^/\\w+$"
     },
     "text": {
       "type": "string"

@@ -33,6 +33,19 @@
     },
 
     {
+      "fileMatch": [
+        "/tests/slack/request/interactive-components/interactive-message.json"
+      ],
+      "url": "/schemas/slack/request/interactive-components/interactive-message/index.json"
+    },
+    {
+      "fileMatch": [
+        "/tests/slack/request/interactive-components/interactive-message.remote.json"
+      ],
+      "url": "https://unpkg.com/@nju33/json-schema@0.0.9/schemas/slack/request/interactive-components/interactive-message/index.json"
+    },
+
+    {
       "fileMatch": ["/tests/slack/request/slash-command.json"],
       "url": "/schemas/slack/request/slash-command/index.json"
     },

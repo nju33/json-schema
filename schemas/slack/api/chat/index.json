@@ -1,5 +1,5 @@
 {
-  "$id": "http://unpkg.com/@nju33/json-schema/schemas/slack/chat.json",
+  "$id": "http://unpkg.com/@nju33/json-schema/schemas/slack/api/chat/index.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "JSON schema for Slack chat.*",
   "oneOf": [

@@ -1,0 +1,150 @@
+{
+  "$id": "http://unpkg.com/@nju33/json-schema/schemas/slack/request/interactive-components/interactive-message.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JSON schema for interactive message",
+  "definitions": {
+    "type": {
+      "type": "string",
+      "default": "interactive_message"
+    },
+    "selectAction": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "selected_options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "string"
+              }
+            },
+            "required": ["value"]
+          }
+        }
+      },
+      "required": ["name", "selected_options"]
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/definitions/selectAction"
+          }
+        ]
+      }
+    },
+    "callback_id": {
+      "type": "string"
+    },
+    "team": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "../../team.json#/definitions/id"
+        },
+        "domain": {
+          "$ref": "../../team.json#/definitions/domain"
+        }
+      }
+    },
+    "channel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "../../channel.json#/definitions/id"
+        },
+        "name": {
+          "$ref": "../../channel.json#/definitions/name"
+        }
+      }
+    },
+    "user": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "../../user.json#/definitions/id"
+        },
+        "name": {
+          "$ref": "../../user.json#/definitions/name"
+        }
+      }
+    },
+    "action_ts": {
+      "type": "string",
+      "examples": ["1481579588.685999"]
+    },
+    "message_ts": {
+      "type": "string",
+      "examples": ["1481579582.000003"]
+    },
+    "attachment_id": {
+      "type": "string",
+      "default": "1"
+    },
+    "token": {
+      "type": "string"
+    },
+    "original_message": {
+      "type": "object"
+    },
+    "response_url": {
+      "$ref": "../../../../pattern.json#/definitions/string/url",
+      "examples": [
+        "https://hooks.slack.com/actions/T012AB0A1/1234567890/JpmK0yzoZ5eRiqfeduTBYXWQ"
+      ]
+    },
+    "trigger_id": {
+      "type": "string",
+      "examples": ["13345224609.738474920.8088930838d88f008e0"]
+    }
+  },
+
+  "type": "object",
+  "properties": {
+    "type": {
+      "$ref": "#/definitions/type"
+    },
+    "actions": {
+      "$ref": "#/definitions/actions"
+    },
+    "callback_id": {
+      "$ref": "#/definitions/callback_id"
+    },
+    "team": {
+      "$ref": "#/definitions/team"
+    },
+    "channel": {
+      "$ref": "#/definitions/channel"
+    },
+    "user": {
+      "$ref": "#/definitions/user"
+    },
+    "action_ts": {
+      "$ref": "#/definitions/action_ts"
+    },
+    "message_ts": {
+      "$ref": "#/definitions/message_ts"
+    },
+    "attachment_id": {
+      "$ref": "#/definitions/attachment_id"
+    },
+    "token": {
+      "$ref": "#/definitions/token"
+    },
+    "original_message": {
+      "$ref": "#/definitions/original_message"
+    },
+    "response_url": {
+      "$ref": "#/definitions/response_url"
+    },
+    "trigger_id": {
+      "$ref": "#/definitions/trigger_id"
+    }
+  },
+  "required": ["type", "actions"]
+}

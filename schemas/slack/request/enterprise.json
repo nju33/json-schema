@@ -1,0 +1,12 @@
+{
+  "definitions": {
+    "id": {
+      "type": "string",
+      "examples": ["E0001"]
+    },
+    "name": {
+      "type": "string",
+      "examples": ["JSON Schema Inc"]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "definitions": {
+    "id": {
+      "type": "string",
+      "examples": ["T0001"]
+    },
+    "domain": {
+      "type": "string",
+      "examples": ["json-schema"]
+    }
+  }
+}
