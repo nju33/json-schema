@@ -1,14 +1,28 @@
 {
-	"channel": 123,
-	"text": "",
-	"as_user": false,
+  "channel": "",
+  "text": "",
+  "as_user": false,
   "attachments": [
     {
       "author_name": "hoge",
       "author_icon": "https://sdf.com",
-      "footer": "a"
+      "footer": "a",
+      "callback_id": "",
+      "actions": [
+        {
+					"title": "",
+					"value": "",
+          "type": "select",
+          "options": [
+            {
+              "text": "a",
+              "value": ""
+            }
+          ]
+        }
+      ]
     }
-	],
-	"icon_emoji": ":aa:",
-	"username": "nju33"
+  ],
+  "icon_emoji": ":aa:",
+  "username": "nju33"
 }

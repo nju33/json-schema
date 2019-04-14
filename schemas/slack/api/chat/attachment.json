@@ -57,6 +57,19 @@
     "ts": {
       "type": "number"
     },
+    "attachment_type": {
+      "type": "string",
+      "examples": ["default"]
+    },
+    "callback_id": {
+      "type": "string"
+		},
+    "actions": {
+      "type": "array",
+      "items": {
+        "$ref": "./action.json#/definitions/action"
+      }
+    },
     "attachment": {
       "type": "object",
       "properties": {
@@ -104,13 +117,20 @@
         },
         "ts": {
           "$ref": "#/definitions/ts"
+        },
+        "callback_id": {
+          "$ref": "#/definitions/callback_id"
+        },
+        "actions": {
+          "$ref": "#/definitions/actions"
         }
       },
       "dependencies": {
         "author_link": ["author_name"],
         "author_icon": ["author_name"],
         "title_link": ["title"],
-        "footer_icon": ["footer"]
+        "footer_icon": ["footer"],
+        "actions": ["callback_id"]
       }
     }
   }

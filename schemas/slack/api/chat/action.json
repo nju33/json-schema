@@ -1,0 +1,97 @@
+{
+  "definitions": {
+    "name": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["button", "select"]
+		},
+		"option": {
+			"type": "object",
+			"properties": {
+				"text": {
+					"type": "string"
+				},
+				"value": {
+					"type": "string"
+				}
+			}
+		},
+		"options": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/option"
+			}
+		},
+    "short": {
+      "type": "boolean"
+    },
+    "value": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "style": {
+      "type": "string",
+      "enum": ["default", "primary", "danger"]
+    },
+    "confirm": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "ok_text": {
+          "type": "string",
+          "default": "Yes"
+        },
+        "dismiss_text": {
+          "type": "string",
+          "default": "No"
+        }
+      }
+    },
+    "action": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "value": {
+          "$ref": "#/definitions/value"
+        },
+        "short": {
+          "$ref": "#/definitions/short"
+        },
+        "type": {
+          "$ref": "#/definitions/type"
+				},
+				"options": {
+					"$ref": "#/definitions/options"
+				},
+        "style": {
+          "$ref": "#/definitions/style"
+        },
+        "confirm": {
+          "$ref": "#/definitions/confirm"
+        }
+      },
+      "required": ["title", "value", "type"]
+    }
+  }
+}
