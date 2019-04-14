@@ -11,7 +11,7 @@
     "attachments": {
       "type": "array",
       "items": {
-        "$ref": "./attachment.json#/definitions/attachment"
+        "$ref": "../../message/attachment.json#/definitions/attachment"
       }
     },
     "as_user": {
@@ -21,7 +21,7 @@
     "blocks": {
       "type": "array",
       "items": {
-        "type": "object"
+        "$ref": "../../message/block.json#/definitions/block"
       }
     },
     "icon_emoji": {

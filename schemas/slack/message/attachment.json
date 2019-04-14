@@ -124,7 +124,8 @@
         "actions": {
           "$ref": "#/definitions/actions"
         }
-      },
+			},
+			"required": ["text"],
       "dependencies": {
         "author_link": ["author_name"],
         "author_icon": ["author_name"],

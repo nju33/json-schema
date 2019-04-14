@@ -90,7 +90,35 @@
       "type": "string"
     },
     "original_message": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "bot_id": {
+          "type": "string",
+          "examples": ["B08BCU62D"]
+        },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "$ref": "../../../message/attachment.json#/definitions/attachment"
+          }
+        },
+        "type": {
+          "type": "string",
+          "default": "message"
+        },
+        "subtype": {
+          "type": "string",
+          "examples": ["bot_message"]
+        },
+        "ts": {
+          "type": "string",
+          "examples": ["1481579582.000003"]
+        }
+      },
+      "required": ["text", "type"]
     },
     "response_url": {
       "$ref": "../../../../pattern.json#/definitions/string/url",
