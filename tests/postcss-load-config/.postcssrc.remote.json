@@ -1,0 +1,16 @@
+{
+  "parser": false,
+  "syntax": "postcss-sass",
+  "map": "inline",
+  "from": "aa",
+  "to": "bb",
+  "plugins": {
+    "postcss-import": null,
+    "autoprefixer": false,
+    "postcss-xxx": {
+      "options": {
+        "foo": "fookk"
+      }
+    }
+  }
+}

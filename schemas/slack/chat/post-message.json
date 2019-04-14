@@ -14,6 +14,53 @@
         "$ref": "./attachment.json#/definitions/attachment"
       }
     },
+    "as_user": {
+      "type": "boolean",
+      "default": false
+    },
+    "blocks": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "icon_emoji": {
+      "type": "string",
+      "examples": [":+1:", ":smile:", ":tada:"]
+    },
+    "icon_url": {
+      "$ref": "../../pattern.json#/definitions/string/url"
+    },
+    "link_names": {
+      "type": "boolean"
+    },
+    "mrkdwn": {
+      "type": "boolean",
+      "default": true
+    },
+    "parse": {
+      "description": "Change how messages are treated. Defaults to none",
+      "type": "string",
+      "examples": ["full"]
+    },
+    "reply_broadcast": {
+      "type": "boolean"
+    },
+    "thread_ts": {
+      "description": "Provide another message's ts value to make this message a reply. Avoid using a reply's ts value; use its parent instead",
+      "type": "string",
+      "examples": ["1234567890.123456"]
+    },
+    "unfurl_links": {
+      "type": "boolean"
+    },
+    "unfurl_media": {
+      "type": "boolean"
+    },
+    "username": {
+      "type": "string",
+      "examples": ["My Bot"]
+    },
     "postMessage": {
       "type": "object",
       "properties": {
@@ -23,8 +70,44 @@
         "text": {
           "$ref": "#/definitions/text"
         },
+        "as_user": {
+          "$ref": "#/definitions/as_user"
+        },
         "attachments": {
           "$ref": "#/definitions/attachments"
+        },
+        "blocks": {
+          "$ref": "#/definitions/blocks"
+        },
+        "icon_emoji": {
+          "$ref": "#/definitions/icon_emoji"
+        },
+        "icon_url": {
+          "$ref": "#/definitions/icon_url"
+        },
+        "link_names": {
+          "$ref": "#/definitions/link_names"
+        },
+        "mrkdwn": {
+          "$ref": "#/definitions/mrkdwn"
+        },
+        "parse": {
+          "$ref": "#/definitions/parse"
+        },
+        "reply_broadcast": {
+          "$ref": "#/definitions/reply_broadcast"
+        },
+        "thread_ts": {
+          "$ref": "#/definitions/thread_ts"
+        },
+        "unfurl_links": {
+          "$ref": "#/definitions/unfurl_links"
+        },
+        "unfurl_media": {
+          "$ref": "#/definitions/unfurl_media"
+        },
+        "username": {
+          "$ref": "#/definitions/username"
         }
       }
     }
