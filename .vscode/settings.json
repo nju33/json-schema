@@ -11,7 +11,7 @@
     },
     {
       "fileMatch": ["/tests/codesandbox/sandbox.config.remote.json"],
-      "url": "https://unpkg.com/@nju33/json-schema@0.0.8/schemas/codesandbox/sandbox.config.json"
+      "url": "https://unpkg.com/@nju33/json-schema@0.0.9/schemas/codesandbox/sandbox.config.json"
     },
 
     {
@@ -20,7 +20,7 @@
     },
     {
       "fileMatch": ["/tests/postcss-load-config/.postcssrc.remote.json"],
-      "url": "https://unpkg.com/@nju33/json-schema@0.0.8/schemas/postcss-load-config/.postcssrc.json"
+      "url": "https://unpkg.com/@nju33/json-schema@0.0.9/schemas/postcss-load-config/.postcssrc.json"
     },
 
     {
@@ -29,7 +29,7 @@
     },
     {
       "fileMatch": ["/tests/slack/api/chat/post-message.remote.json"],
-      "url": "https://unpkg.com/@nju33/json-schema/schemas/slack/api/chat/index.json"
+      "url": "https://unpkg.com/@nju33/json-schema@0.0.9/schemas/slack/api/chat/index.json"
     },
 
     {
@@ -38,7 +38,7 @@
     },
     {
       "fileMatch": ["/tests/slack/request/slash-command.remote.json"],
-      "url": "https://unpkg.com/@nju33/json-schema/schemas/slack/request/slash-command/index.json"
+      "url": "https://unpkg.com/@nju33/json-schema@0.0.9/schemas/slack/request/slash-command/index.json"
     }
   ]
 }
