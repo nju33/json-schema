@@ -15,6 +15,15 @@
     },
 
     {
+      "fileMatch": ["/tests/nju33/theme.json"],
+      "url": "/schemas/nju33/theme/index.json"
+    },
+    {
+      "fileMatch": ["/tests/nju33/theme.remote.json"],
+      "url": "https://unpkg.com/@nju33/json-schema@0.0.13/schemas/nju33/theme/index.json"
+    },
+
+    {
       "fileMatch": ["/tests/postcss-load-config/.postcssrc.json"],
       "url": "/schemas/postcss-load-config/.postcssrc.json"
     },

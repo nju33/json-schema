@@ -1,0 +1,16 @@
+{
+  "core": {
+    "accent": "orange"
+  },
+  "text": {
+    "color": {
+      "orange": "#e6c02a",
+      "white": "#f8f8f8"
+    }
+  },
+  "background": {
+    "color": {
+      "black": "#292929"
+    }
+  }
+}

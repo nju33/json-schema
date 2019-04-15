@@ -1,0 +1,124 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "JSON schema for generic theme",
+  "type": "object",
+  "definitions": {
+    "color": {
+      "type": "object",
+      "properties": {
+        "yellow": {
+          "$ref": "../../pattern.json#/definitions/string/color"
+        },
+        "green": {
+          "$ref": "../../pattern.json#/definitions/string/color"
+        },
+        "blue": {
+          "$ref": "../../pattern.json#/definitions/string/color"
+        },
+        "purple": {
+          "$ref": "../../pattern.json#/definitions/string/color"
+        },
+        "red": {
+          "$ref": "../../pattern.json#/definitions/string/color"
+        },
+        "orange": {
+          "$ref": "../../pattern.json#/definitions/string/color"
+        },
+        "white": {
+          "$ref": "../../pattern.json#/definitions/string/color"
+        },
+        "black": {
+          "$ref": "../../pattern.json#/definitions/string/color"
+        },
+        "gray": {
+          "$ref": "../../pattern.json#/definitions/string/color"
+        }
+      }
+    },
+    "_fontSize": {
+      "type": "number",
+      "minimum": 9
+    },
+    "_sizeBase": {
+      "type": "object",
+      "properties": {
+        "weight": {
+          "enum": [
+            100,
+            "thin",
+            200,
+            "extra light",
+            300,
+            "light",
+            400,
+            "normal",
+            500,
+            "medium",
+            600,
+            "semi bold",
+            700,
+            "bold",
+            800,
+            "extra bold",
+            900,
+            "black"
+          ]
+        },
+        "value": {
+          "$ref": "#/definitions/_fontSize"
+        }
+      }
+    },
+    "size": {
+      "headline": {
+        "$ref": "#/definitions/_sizeBase"
+      },
+      "subHeadline": {
+        "$ref": "#/definitions/_sizeBase"
+      },
+      "label": {
+        "$ref": "#/definitions/_sizeBase"
+      },
+      "text": {
+        "$ref": "#/definitions/_sizeBase"
+      },
+      "small": {
+        "$ref": "#/definitions/_sizeBase"
+      }
+    }
+  },
+  "properties": {
+    "core": {
+      "type": "object",
+      "properties": {
+        "accent": {
+          "type": "string",
+          "enum": ["yellow", "green", "blue", "purple", "red", "orange"]
+        }
+      },
+      "required": ["accent"]
+    },
+    "text": {
+      "type": "object",
+      "properties": {
+        "size": {
+          "$ref": "#/definitions/size"
+        },
+        "color": {
+          "$ref": "#/definitions/color"
+        }
+      },
+      "required": ["color"]
+    },
+    "background": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "$ref": "#/definitions/color"
+        }
+      },
+      "required": ["color"]
+    }
+  },
+  "required": ["core", "text", "background"]
+}
