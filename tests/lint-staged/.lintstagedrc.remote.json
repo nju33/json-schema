@@ -1,0 +1,7 @@
+{
+  "linters": {
+    "*.js": ["exlint --fix", "git add"],
+    "*.md": "prettier --write"
+  },
+  "additional": "foo"
+}

@@ -19,8 +19,17 @@
       "url": "/schemas/husky/.huskyrc.json"
     },
     {
-      "fileMatch": ["/tests/codesandbox/sandbox.config.remote.json"],
+      "fileMatch": ["/tests/husky/.huskyrc.remote.json"],
       "url": "https://unpkg.com/@nju33/json-schema@0.0.15/schemas/husky/.huskyrc.json"
+    },
+
+    {
+      "fileMatch": ["/tests/lint-staged/.lintstagedrc.json"],
+      "url": "/schemas/lint-staged/.lintstagedrc.json"
+    },
+    {
+      "fileMatch": ["/tests/lint-staged/.lintstagedrc.remote.json"],
+      "url": "https://unpkg.com/@nju33/json-schema@0.0.15/schemas/lint-staged/.lintstagedrc.json"
     },
 
     {
@@ -83,6 +92,7 @@
   ],
   
   "cSpell.words": [
-    "applypatch"
+    "applypatch",
+    "micromatch"
   ]
 }
