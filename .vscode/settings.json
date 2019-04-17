@@ -15,6 +15,15 @@
     },
 
     {
+      "fileMatch": ["/tests/husky/.huskyrc.json"],
+      "url": "/schemas/husky/.huskyrc.json"
+    },
+    {
+      "fileMatch": ["/tests/codesandbox/sandbox.config.remote.json"],
+      "url": "https://unpkg.com/@nju33/json-schema@0.0.14/schemas/husky/.huskyrc.json"
+    },
+
+    {
       "fileMatch": ["/tests/nju33/theme.json"],
       "url": "/schemas/nju33/theme/index.json"
     },

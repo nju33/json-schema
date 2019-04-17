@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "JSON schema for sandbox.config.json",
+  "type": "object",
+  "properties": {
+    "hooks": {
+      "type": "object",
+      "properties": {
+        "pre-commit": {
+          "type": "string",
+          "enum": ["lint-staged"]
+        }
+      }
+    }
+  },
+  "required": ["hooks"]
+}
