@@ -1,6 +1,12 @@
 {
   "definitions": {
     "types": {
+      "stringObject": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
       "stringOrStringArray": {
         "oneOf": [
           {

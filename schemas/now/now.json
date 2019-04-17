@@ -1,0 +1,172 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "JSON schema for now.json",
+  "definitions": {
+    "object": {
+      "envProps": {
+        "properties": {
+          "NODE_ENV": {
+            "type": "string",
+            "default": "production",
+            "enum": ["production", "development", "test"]
+          },
+          "STRIPE_PUBLISHABLE_KEY": {
+            "type": "string"
+          },
+          "STRIPE_SECRET_KEY": {
+            "type": "string"
+          }
+        }
+      },
+      "envPropsOnBuild": {
+        "properties": {
+          "NPM_TOKEN": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "version": {
+      "description": "Specifies the Now Platform version the deployment should use and is known to work with",
+      "type": "number",
+      "enum": [1, 2],
+      "default": 2
+    },
+    "name": {
+      "description": "string name for the deployment",
+      "type": "string"
+    },
+    "alias": {
+      "description": "string name for the deployment",
+      "type": "string"
+    },
+    "schema": {
+      "description": "For teams, either an ID or slug. For users, either a email address, username, or ID",
+      "type": "string"
+    },
+    "env": {
+      "description": "environment keys and values",
+      "allOf": [
+        {
+          "$ref": "../alias.json#/definitions/types/stringObject"
+        },
+        {
+          "$ref": "#/definitions/object/envProps"
+        }
+      ]
+    },
+    "build": {
+      "type": "object",
+      "properties": {
+        "env": {
+          "description": "environment keys and values.",
+          "allOf": [
+            {
+              "$ref": "../alias.json#/definitions/types/stringObject"
+            },
+            {
+              "$ref": "#/definitions/object/envProps"
+            },
+            {
+              "$ref": "#/definitions/object/envPropsOnBuild"
+            }
+          ]
+        }
+      },
+      "required": ["env"]
+    },
+    "builds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "src": {
+            "description": "A glob expression or pathname. If more than one file is resolved, one build will be created per matched file. It can include `*` and `**`",
+            "type": "string"
+          },
+          "use": {
+            "description": "A npm module to be installed by the build process. It can include a semver compatible version",
+            "type": "string",
+            "enum": [
+              "@now/static",
+              "@now/static-build",
+              "@now/node",
+              "@now/node@canary",
+              "@now/node-server",
+              "@now/next",
+              "@now/go",
+              "@now/php",
+              "@now/python",
+              "@now/rust",
+              "@now/bash",
+              "@now/mdx-deck",
+              "@now/optipng",
+              "@now/html-minifier",
+              "@now/md"
+            ]
+          },
+          "config": {
+            "description": "Optionally, an object including arbitrary metadata to be passed to the Builder",
+            "type": "object",
+            "properties": {
+              "maxLambdaSize": {
+                "description": "Maximum Bundle Size",
+                "type": "string",
+                "default": "5mb",
+                "examples": [
+                  "10mb",
+                  "15mb",
+                  "20mb",
+                  "25mb",
+                  "30mb",
+                  "35mb",
+                  "40mb",
+                  "45mb",
+                  "50mb"
+                ]
+              }
+            }
+          }
+        },
+        "required": ["src", "use"]
+      }
+    },
+    "routes": {
+      "description": "a list of route definitions",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "src": {
+            "description": "A PCRE-compatible regular expression that matches each incoming pathname",
+            "type": "string"
+          },
+          "methods": {
+            "description": "A set of HTTP method types. If no method is provided, requests with any HTTP method will be a candidate for the route",
+            "type": "array",
+            "items": {
+              "$ref": "../http.json#/definitions/enum/method"
+            }
+          },
+          "dest": {
+            "description": "A destination pathname or full URL, including querystring, with the ability to embed capture groups as $1, $2…",
+            "type": "string"
+          },
+          "headers": {
+            "description": "A set of headers to apply for responses",
+            "$ref": "../http.json#/definitions/object/headers"
+          },
+          "status": {
+            "description": "A status code to respond with. Can be used in tandem with `Location:` header to implement redirects",
+            "$ref": "../http.json#/definitions/enum/status"
+          }
+        },
+        "required": ["src"]
+      }
+    }
+  },
+  "required": ["version", "name"]
+}

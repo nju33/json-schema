@@ -42,6 +42,15 @@
     },
 
     {
+      "fileMatch": ["/tests/now/now.json"],
+      "url": "/schemas/now/now.json"
+    },
+    {
+      "fileMatch": ["/tests/now/now.remote.json"],
+      "url": "https://unpkg.com/@nju33/json-schema@0.0.19/schemas/now/now.json"
+    },
+
+    {
       "fileMatch": ["/tests/postcss-load-config/.postcssrc.json"],
       "url": "/schemas/postcss-load-config/.postcssrc.json"
     },
@@ -90,18 +99,6 @@
       "url": "https://unpkg.com/@nju33/json-schema@0.0.9/schemas/slack/request/slash-command/index.json"
     }
   ],
-  
-  "cSpell.words": [
-    "applescript",
-    "applypatch",
-    "atomtest",
-    "embertest",
-    "greasemonkey",
-    "micromatch",
-    "nashorn",
-    "prototypejs",
-    "qunit",
-    "serviceworker",
-    "webextensions"
-  ]
+
+  "cSpell.words": ["optipng"]
 }
