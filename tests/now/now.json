@@ -5,7 +5,7 @@
   "schema": "nnn",
   "env": {
     "aa": "aa",
-    "NODE_ENV": "a"
+    "NODE_ENV": "production"
   },
   "build": {
     "env": {
@@ -14,9 +14,9 @@
     }
   },
   "builds": [
-    {"src": "asdf", "use": "@now/bash"},
-    {"src": "asdf", "use": "@now/next"},
-    {"src": "asdf", "use": "@now/bash", "config": {"maxLambdaSize": "15mb"}},
+    {"src": "aaa", "use": "@now/bash"},
+    {"src": "aaa", "use": "@now/next"},
+    {"src": "aaa", "use": "@now/bash", "config": {"maxLambdaSize": "15mb"}},
     {"src": "*.html", "use": "@now/static"},
     {"src": "*.js", "use": "@now/node"}
   ],

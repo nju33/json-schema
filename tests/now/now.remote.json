@@ -5,7 +5,7 @@
   "schema": "nnn",
   "env": {
     "aa": "aa",
-    "NODE_ENV": "a"
+    "NODE_ENV": "production"
   },
   "build": {
     "env": {
