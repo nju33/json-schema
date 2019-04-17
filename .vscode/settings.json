@@ -20,7 +20,7 @@
     },
     {
       "fileMatch": ["/tests/codesandbox/sandbox.config.remote.json"],
-      "url": "https://unpkg.com/@nju33/json-schema@0.0.14/schemas/husky/.huskyrc.json"
+      "url": "https://unpkg.com/@nju33/json-schema@0.0.15/schemas/husky/.huskyrc.json"
     },
 
     {
@@ -80,5 +80,9 @@
       "fileMatch": ["/tests/slack/request/slash-command.remote.json"],
       "url": "https://unpkg.com/@nju33/json-schema@0.0.9/schemas/slack/request/slash-command/index.json"
     }
+  ],
+  
+  "cSpell.words": [
+    "applypatch"
   ]
 }

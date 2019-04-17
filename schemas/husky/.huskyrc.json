@@ -1,14 +1,61 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "JSON schema for sandbox.config.json",
+  "definitions": {
+    "default": {
+      "type": "string",
+      "enum": ["lint-staged"]
+    }
+  },
   "type": "object",
   "properties": {
     "hooks": {
       "type": "object",
       "properties": {
+        "applypatch-msg": {
+          "$ref": "#/definitions/default"
+        },
+        "pre-applypatch": {
+          "$ref": "#/definitions/default"
+        },
+        "post-applypatch": {
+          "$ref": "#/definitions/default"
+        },
         "pre-commit": {
-          "type": "string",
-          "enum": ["lint-staged"]
+          "$ref": "#/definitions/default"
+        },
+        "prepare-commit-msg": {
+          "$ref": "#/definitions/default"
+        },
+        "commit-msg": {
+          "$ref": "#/definitions/default"
+        },
+        "post-commit": {
+          "$ref": "#/definitions/default"
+        },
+        "pre-rebase": {
+          "$ref": "#/definitions/default"
+        },
+        "post-checkout": {
+          "$ref": "#/definitions/default"
+        },
+        "post-merge": {
+          "$ref": "#/definitions/default"
+        },
+        "pre-receive": {
+          "$ref": "#/definitions/default"
+        },
+        "update": {
+          "$ref": "#/definitions/default"
+        },
+        "post-update": {
+          "$ref": "#/definitions/default"
+        },
+        "pre-auto-gc": {
+          "$ref": "#/definitions/default"
+        },
+        "post-rewrite": {
+          "$ref": "#/definitions/default"
         }
       }
     }
