@@ -92,7 +92,16 @@
   ],
   
   "cSpell.words": [
+    "applescript",
     "applypatch",
-    "micromatch"
+    "atomtest",
+    "embertest",
+    "greasemonkey",
+    "micromatch",
+    "nashorn",
+    "prototypejs",
+    "qunit",
+    "serviceworker",
+    "webextensions"
   ]
 }

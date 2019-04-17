@@ -1,0 +1,20 @@
+{
+  "definitions": {
+    "types": {
+      "stringOfStringArray": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "array",
+            "minItems": 1,
+            "additionalItems": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
