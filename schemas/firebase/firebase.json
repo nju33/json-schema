@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "JSON schema for firebase.json",
+  "type": "object",
+  "properties": {
+    "public": {
+      "description": "Firebase Hosting にアップロードするディレクトリ",
+      "type": "string",
+      "examples": ["app"]
+    },
+    "ignore": {
+      "description": "デプロイ時に無視するファイルを指定",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": ["firebase.json", "**/.*", "**/node_modules/**"]
+      }
+    },
+    "redirects": {
+      "description": "リダイレクト ルール",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "description": "各リクエストの開始時（対象のパスにファイルまたはフォルダが存在しているかどうかを確認する前）に、すべての URL パスに対して照合される glob パターン",
+            "type": "string"
+          },
+          "destination": {
+            "description": "Location ヘッダーの値",
+            "type": "string"
+          },
+          "type": {
+            "description": "HTTP レスポンス コード",
+            "type": "number",
+            "enum": [301, 302]
+          }
+        },
+        "required": ["source", "destination", "type"]
+      }
+    },
+    "rewrites": {
+      "description": "URL リライトルール",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "description": "各リクエストの開始時（対象のパスにファイルまたはフォルダが存在しているかどうかを確認する前）に、すべての URL パスに対して照合される glob パターン",
+            "type": "string"
+          },
+          "destination": {
+            "description": "Location ヘッダーの値",
+            "type": "string"
+          }
+        },
+        "required": ["source", "destination"]
+      }
+    }
+  },
+  "required": ["public"]
+}
