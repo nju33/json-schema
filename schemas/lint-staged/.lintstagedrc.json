@@ -29,7 +29,7 @@
     "linters": {
       "type": "object",
       "additionalProperties": {
-        "$ref": "../alias.json#/definitions/types/stringOfStringArray"
+        "$ref": "../alias.json#/definitions/types/stringOrStringArray"
       }
     },
     "subTaskConcurrency": {
@@ -44,6 +44,6 @@
     }
   },
   "additionalProperties": {
-    "$ref": "../alias.json#/definitions/types/stringOfStringArray"
+    "$ref": "../alias.json#/definitions/types/stringOrStringArray"
   }
 }

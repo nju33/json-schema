@@ -4,8 +4,8 @@
   "type": "object",
   "properties": {
     "extends": {
-      "type": "string",
-      "default": "nju33"
+      "$ref": "../alias.json#/definitions/types/stringOrStringArray",
+      "default": ["nju33"]
     }
 	},
 	"required": ["extends"]

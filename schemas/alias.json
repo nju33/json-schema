@@ -1,7 +1,7 @@
 {
   "definitions": {
     "types": {
-      "stringOfStringArray": {
+      "stringOrStringArray": {
         "oneOf": [
           {
             "type": "string"
