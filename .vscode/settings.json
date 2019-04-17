@@ -29,7 +29,7 @@
     },
     {
       "fileMatch": ["/tests/lint-staged/.lintstagedrc.remote.json"],
-      "url": "https://unpkg.com/@nju33/json-schema@0.0.15/schemas/lint-staged/.lintstagedrc.json"
+      "url": "https://unpkg.com/@nju33/json-schema@0.0.16/schemas/lint-staged/.lintstagedrc.json"
     },
 
     {

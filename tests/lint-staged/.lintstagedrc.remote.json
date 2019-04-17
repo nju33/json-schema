@@ -1,6 +1,6 @@
 {
   "linters": {
-    "*.js": ["exlint --fix", "git add"],
+    "*.js": ["eslint --fix", "git add"],
     "*.md": "prettier --write"
   },
   "additional": "foo"
