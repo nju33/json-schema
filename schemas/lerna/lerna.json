@@ -15,6 +15,9 @@
       "default": "npm",
       "enum": ["npm", "yarn"]
     },
+    "useWorkspaces": {
+      "type": "boolean"
+    },
     "command": {
       "type": "object",
       "properties": {
