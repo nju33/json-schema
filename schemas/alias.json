@@ -21,6 +21,15 @@
             "uniqueItems": true
           }
         ]
+      },
+      "stringOrList": {
+        "$ref": "#/definitions/types/stringOrStringArray"
+      },
+      "map": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
       }
     }
   }
