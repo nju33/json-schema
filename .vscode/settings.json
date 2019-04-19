@@ -24,6 +24,15 @@
     },
 
     {
+      "fileMatch": ["/tests/lerna/lerna.json"],
+      "url": "/schemas/lerna/lerna.json"
+    },
+    {
+      "fileMatch": ["/tests/lerna/lerna.remote.json"],
+      "url": "https://unpkg.com/@nju33/json-schema@0.0.20/schemas/lerna/lerna.json"
+    },
+
+    {
       "fileMatch": ["/tests/lint-staged/.lintstagedrc.json"],
       "url": "/schemas/lint-staged/.lintstagedrc.json"
     },
@@ -100,5 +109,16 @@
     }
   ],
 
-  "cSpell.words": ["optipng"]
+  "yaml.schemas": {
+    "./schemas/circleci/config.yml.json": ["circleci/config.yml"]
+  },
+
+  "cSpell.words": [
+    "entrypoint",
+    "macos",
+    "optipng",
+    "whitelisting",
+    "xcode",
+    "xlarge"
+  ]
 }

@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "JSON schema for Lerna",
+  "type": "object",
+  "properties": {
+    "version": {
+      "description": "the current version of the repository",
+      "type": "string",
+      "default": "0.0.0",
+      "enum": ["0.0.0", "independent"]
+    },
+    "npmClient": {
+      "description": "an option to specify a specific client to run commands with",
+      "type": "string",
+      "default": "npm",
+      "enum": ["npm", "yarn"]
+    },
+    "command": {
+      "type": "object",
+      "properties": {
+        "publish": {
+          "type": "object",
+          "properties": {
+            "ignoreChanges": {
+              "description": "an array of globs that won't be included in lerna `changed/publish`",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "message": {
+              "description": "a custom commit message when performing version updates for publication",
+              "type": "string"
+            }
+          }
+        },
+        "bootstrap": {
+          "type": "object",
+          "properties": {
+            "ignore": {
+              "description": "an array of globs that won't be bootstrapped when running the `lerna bootstrap` command",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "npmClientArgs": {
+              "description": "array of strings that will be passed as arguments directly to `npm install` during the `lerna bootstrap` command",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "scope": {
+              "description": " an array of globs that restricts which packages will be bootstrapped when running the `lerna bootstrap` command",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "packages": {
+      "description": "Array of globs to use as package locations",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
