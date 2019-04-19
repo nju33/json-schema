@@ -1,6 +1,6 @@
 {
   "name": "@nju33/json-schema",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "main": "index.js",
   "files": [
     "index.js",
