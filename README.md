@@ -8,14 +8,19 @@
 
 ### schemas
 
+- [circleci(wip)](https://unpkg.com/@nju33/json-schema/schemas/circleci/config.yml.json)
+- [firebase(wip)](https://unpkg.com/@nju33/json-schema/schemas/firebase/firebase.json)
 - [codesandbox](https://unpkg.com/@nju33/json-schema/schemas/codesandbox/sandbox.config.json)
 - [husky](https://unpkg.com/@nju33/json-schema/schemas/husky/.huskyrc.json)
+- [lerna](https://unpkg.com/@nju33/json-schema/schemas/lerna/lerna.json)
 - [lint-staged](https://unpkg.com/@nju33/json-schema/schemas/lint-staged/.lintstagedrc.json)
-- nju33 - [theme](https://unpkg.com/@nju33/json-schema/schemas/nju33/theme/index.json)
+- nju33
+  - [theme](https://unpkg.com/@nju33/json-schema/schemas/nju33/theme/index.json)
 - [now](https://unpkg.com/@nju33/json-schema/schemas/now/now.json)
 - [postcss](https://unpkg.com/@nju33/json-schema/schemas/postcss-load-config/.postcssrc.json)
 - [renovate](https://unpkg.com/@nju33/json-schema/schemas/renovate/renovate.json)
-- slack - [chat](https://unpkg.com/@nju33/json-schema/schemas/slack/api/chat/index.json)
+- slack
+  - [chat](https://unpkg.com/@nju33/json-schema/schemas/slack/api/chat/index.json)
 
 ## vscode 設定方法
 
