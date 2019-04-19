@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "JSON schema for .circleci/config.yml",
+  "definitions": {
+    "default": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "image": {
+                "description": "The name of a custom docker image to use",
+                "type": "string",
+                "examples": [
+                  "circleci/node:10",
+                  "circleci/node:10-browsers",
+                  "ubuntu:14.04",
+                  "postgres:9.4.1",
+                  "circleci/classic:latest",
+                  "alpine"
+                ]
+              },
+              "name": {
+                "description": "The name the container is reachable by. By default, container services are accessible through `localhost`",
+                "type": "string"
+              },
+              "entrypoint": {
+                "description": "The command used as executable when launching the container",
+                "$ref": "../../alias.json#/definitions/types/stringOrList"
+              },
+              "command": {
+                "description": "The command used as pid 1 (or args for entrypoint) when launching the container",
+                "$ref": "../../alias.json#/definitions/types/stringOrList"
+              },
+              "user": {
+                "description": "Which user to run commands as within the Docker container",
+                "type": "string"
+              },
+              "environment": {
+                "description": "A map of environment variable names and values",
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              "auth": {
+                "description": "Authentication for registries using standard `docker login` credentials",
+                "type": "object"
+              },
+              "aws_auth": {
+                "description": "Authentication for AWS EC2 Container Registry (ECR)",
+                "type": "object"
+              }
+            }
+          }
+        ]
+      },
+      "required": ["image"]
+    }
+  }
+}

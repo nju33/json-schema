@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "JSON schema for .circleci/config.yml",
+  "definitions": {
+    "requires": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "tags": {
+          "type": "object",
+          "properties": {
+            "only": {
+              "$ref": "../../alias.json#/definitions/types/stringOrList"
+            },
+            "ignore": {
+              "$ref": "../../alias.json#/definitions/types/stringOrList"
+            }
+          }
+        },
+        "branches": {
+          "type": "object",
+          "properties": {
+            "only": {
+              "$ref": "../../alias.json#/definitions/types/stringOrList"
+            },
+            "ignore": {
+              "$ref": "../../alias.json#/definitions/types/stringOrList"
+            }
+          }
+        }
+      }
+    },
+    "default": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "default": 2
+        }
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "jobs": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object",
+                    "properties": {
+                      "requires": {
+                        "$ref": "#/definitions/requires"
+                      },
+                      "filters": {
+                        "$ref": "#/definitions/filters"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "triggers": {
+            "type": "array",
+            "additionalItems": {
+              "type": "object",
+              "properties": {
+                "schedule": {
+                  "type": "object",
+                  "properties": {
+                    "cron": {
+                      "type": "string",
+                      "examples": ["5 15 * * *"]
+                    },
+                    "filters": {
+                      "$ref": "#/definitions/filters"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "required": ["jobs"]
+      }
+    }
+  }
+}

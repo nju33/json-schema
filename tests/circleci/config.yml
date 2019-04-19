@@ -1,0 +1,48 @@
+version: 2
+
+jobs:
+  test:
+    docker:
+      - circleci/node10
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - xxx
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: yarn
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Test 
+          command: yarn test
+  test2:
+    machine: true
+    steps:
+      - run: ':'
+
+workflows:
+  version: 2
+  main:
+    triggers:
+      - schedule:
+          cron: '5 15 * * *'
+          filters:
+            branches:
+              only:
+                - develop
+    jobs:
+      - test:
+          filters:
+            branches:
+              only:
+                - master
+            tags:
+              only: /v[0-9]+\.[0-9]+\.[0-9]+/
+      - test2
+      

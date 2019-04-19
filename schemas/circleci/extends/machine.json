@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "JSON schema for .circleci/config.yml",
+  "definitions": {
+    "default": {
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "machine": {
+                "type": "object",
+                "properties": {
+                  "enabled": {
+                    "description": "This must be true in order to enable the `machine` executor. Is required if no other value is specified",
+                    "type": "boolean"
+                  },
+                  "image": {
+                    "description": "The image to use (default: circleci/classic:latest)",
+                    "type": "string"
+                  },
+                  "docker_layer_caching": {
+                    "description": "Set to true to enable Docker Layer Caching",
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

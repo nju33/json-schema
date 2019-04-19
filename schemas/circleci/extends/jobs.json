@@ -1,0 +1,171 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "JSON schema for .circleci/config.yml",
+  "definitions": {
+    "default": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "docker": {
+            "description": "Options for docker executor",
+            "$ref": "./docker.json#/definitions/default"
+          },
+          "machine": {
+            "description": "Options for machine executor",
+            "$ref": "./machine.json#/definitions/default"
+          },
+          "macos": {
+            "description": "Options for macos executor",
+            "$ref": "./macos.json#/definitions/default"
+          },
+          "shell": {
+            "description": "Shell to use for execution command in all steps",
+            "type": "string"
+          },
+          "steps": {
+            "description": "A list of steps to be performed",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "add_ssh_keys": {
+                      "type": "object",
+                      "properties": {
+                        "fingerprints": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "save_cache": {
+                      "type": "object",
+                      "properties": {
+                        "paths": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "examples": ["node_modules"]
+                          }
+                        },
+                        "key": {
+                          "type": "string",
+                          "examples": [
+                            "v1-dependencies-{{ checksum \"package.json\" }}"
+                          ]
+                        }
+                      }
+                    },
+                    "restore_cache": {
+                      "type": "object",
+                      "properties": {
+                        "keys": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "run": {
+                      "description": "Command to run via the shell",
+                      "type": "string"
+                    }
+                  },
+                  "required": ["run"]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "run": {
+                      "type": "object",
+                      "properties": {
+                        "command": {
+                          "description": "Command to run via the shell",
+                          "type": "string",
+                          "examples": ["yarn test"]
+                        },
+                        "name": {
+                          "description": "Title of the step to be shown in the CircleCI UI",
+                          "type": "string",
+                          "default": "command"
+                        },
+                        "shell": {
+                          "description": "Shell to use for execution command",
+                          "type": "string",
+                          "examples": ["/bin/bash", "/bin/sh"]
+                        },
+                        "environment": {
+                          "description": "Additional environmental variables, locally scoped to command",
+                          "$ref": "../../alias.json#/definitions/types/map"
+                        },
+                        "background": {
+                          "description": "Whether or not this step should run in the background",
+                          "type": "boolean",
+                          "default": "boolean"
+                        },
+                        "working_directory": {
+                          "description": "In which directory to run this step",
+                          "type": "string"
+                        },
+                        "no_output_timeout": {
+                          "description": "Elapsed time the command can run without output",
+                          "type": "string",
+                          "default": "10m",
+                          "examples": ["20m", "1.25h", "5s"]
+                        },
+                        "when": {
+                          "description": "Specify when to enable or disable the step",
+                          "type": "string",
+                          "default": "on_success",
+                          "enum": ["always", "on_success", "on_fail"]
+                        }
+                      }
+                    }
+                  },
+                  "required": ["command"]
+                },
+                {
+                  "type": "string",
+                  "enum": ["checkout"]
+                }
+              ]
+            }
+          },
+          "working_directory": {
+            "description": "In which directory to run the steps",
+            "type": "string",
+            "default": "~/project"
+          },
+          "parallelism": {
+            "description": "Number of parallel instances of this job to run",
+            "type": "number",
+            "default": 1
+          },
+          "environment": {
+            "description": "A map of environment variable names and values",
+            "$ref": "../../alias.json#/definitions/types/map"
+          },
+          "branches": {
+            "description": "A map defining rules for whitelisting/blacklisting execution of specific branches for a single job that is not in a workflow or a 2.1 config",
+            "$ref": "./branches.json#/definitions/default"
+          },
+          "resource_class": {
+            "description": "Amount of CPU and RAM allocated to each container in a job",
+            "type": "string",
+            "enum": ["small", "medium", "medium+", "large", "xlarge"]
+          }
+        }
+      }
+    }
+  }
+}

@@ -110,7 +110,10 @@
   ],
 
   "yaml.schemas": {
-    "./schemas/circleci/config.yml.json": ["circleci/config.yml"]
+    "./schemas/circleci/config.yml.json": ["circleci/config.yml"],
+    "https://unpkg.com/@nju33/json-schema@0.0.20/schemas/circleci/config.yml.json": [
+      "circleci/config.remote.yml"
+    ]
   },
 
   "cSpell.words": [
