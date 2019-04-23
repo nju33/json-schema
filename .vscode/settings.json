@@ -3,6 +3,11 @@
     {
       "fileMatch": ["/schemas/**/*.json"],
       "url": "/.vscode/json-schema.json"
+		},
+
+		{
+      "fileMatch": ["/tests/_sandbox.json"],
+      "url": "/schemas/_sandbox.json"
     },
 
     {
