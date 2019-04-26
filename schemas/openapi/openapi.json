@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "JSON schema for OpenAPI",
+  "definitions": {
+    "openapi": {
+      "type": "string",
+      "default": "3.0.0"
+    },
+    "info": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string",
+          "default": "0.0.0"
+        }
+      },
+      "required": ["title", "version"]
+    },
+    "paths": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "get": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "responses": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "properties": {
+                    "description": {
+                      "type": "string"
+                    },
+                    "content": {
+                      "type": "object",
+                      "properties": {
+                        "application/json": {
+                          "type": "object",
+                          "properties": {
+                            "schema": {
+                              "$ref": "../json-schema/json-schema.json#/definitions/default"
+                            },
+                            "examples": {
+                              "type": "object",
+                              "additionalProperties": {
+                                "type": "object",
+                                "properties": {
+                                  "summary": {
+                                    "type": "string"
+                                  },
+                                  "externalValue": {
+                                    "description": "url",
+                                    "type": "string"
+                                  },
+                                  "value": {
+                                    "description": "mock response by string",
+                                    "anyOf": [
+                                      {
+                                        "type": "object",
+                                        "examples": [
+                                          {
+                                            "ok": true
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "string",
+                                        "examples": ["{\"ok\": true}"]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            },
+                            "encoding": {
+                              "type": "object"
+                            }
+                          },
+                          "links": {
+                            "type": "object"
+                          }
+                        },
+                        "application/x-www-form-urlencoded": {
+                          "type": "object"
+                        },
+                        "text/plain": {
+                          "type": "object"
+                        },
+                        "multipart/form-data": {
+                          "type": "object"
+                        },
+                        "multipart/mixed": {
+                          "type": "object"
+                        },
+                        "*/*": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "root": {
+      "type": "object",
+      "properties": {
+        "openapi": {
+          "$ref": "#/definitions/openapi"
+        },
+        "info": {
+          "$ref": "#/definitions/info"
+        },
+        "paths": {
+          "$ref": "#/definitions/paths"
+        }
+      },
+      "required": ["openapi", "paths"]
+    }
+  },
+  "$ref": "#/definitions/root"
+}

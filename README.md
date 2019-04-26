@@ -17,6 +17,7 @@
 - nju33
   - [theme](https://unpkg.com/@nju33/json-schema/schemas/nju33/theme/index.json)
 - [now](https://unpkg.com/@nju33/json-schema/schemas/now/now.json)
+- [openapi(wip)](https://unpkg.com/@nju33/json-schema/schemas/openapi/openapi.json)
 - [postcss](https://unpkg.com/@nju33/json-schema/schemas/postcss-load-config/.postcssrc.json)
 - [renovate](https://unpkg.com/@nju33/json-schema/schemas/renovate/renovate.json)
 - slack

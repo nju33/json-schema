@@ -65,6 +65,15 @@
     },
 
     {
+      "fileMatch": ["/tests/openapi/openapi.json"],
+      "url": "/schemas/openapi/openapi.json"
+    },
+    {
+      "fileMatch": ["/tests/openapi/openapi.remote.json"],
+      "url": "https://unpkg.com/@nju33/json-schema@0.0.21/schemas/openapi/openapi.json"
+    },
+
+    {
       "fileMatch": ["/tests/postcss-load-config/.postcssrc.json"],
       "url": "/schemas/postcss-load-config/.postcssrc.json"
     },
