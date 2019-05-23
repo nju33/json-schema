@@ -4,7 +4,7 @@
   "definitions": {
     "default": {
       "type": "string",
-      "enum": ["lint-staged"]
+      "examples": ["lint-staged"]
     }
   },
   "type": "object",
