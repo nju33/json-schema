@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "title": "JSON schema for sandbox.config.json",
+  "title": "JSON schema for .huskyrc",
   "definitions": {
     "default": {
       "type": "string",
