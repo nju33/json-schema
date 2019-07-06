@@ -1,0 +1,13 @@
+{
+	"extensions": {
+		"recommendations": [
+			"coenraads.bracket-pair-colorizer"
+		]
+	},
+	"folders": [
+		{
+			"name": "<rootDir>",
+			"path": "."
+		}
+	]
+}
