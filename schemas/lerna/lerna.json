@@ -6,8 +6,8 @@
     "version": {
       "description": "the current version of the repository",
       "type": "string",
-      "default": "0.0.0",
-      "enum": ["0.0.0", "independent"]
+      "default": "independent",
+      "examples": ["0.0.0", "independent"]
     },
     "npmClient": {
       "description": "an option to specify a specific client to run commands with",
@@ -60,6 +60,24 @@
               "items": {
                 "type": "string"
               }
+            }
+          }
+        },
+        "version": {
+          "type": "object",
+          "properties": {
+            "allowBranch": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              ]
             }
           }
         }
